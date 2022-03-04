@@ -1,6 +1,6 @@
 <!doctype html><html><head>
 <meta charset=utf-8>
-<meta http-equiv=x-ua-compatible content="IE=edge"><title>Setup Rancher cluster on OVH Public Cloud - Archie</title><meta name=viewport content="width=device-width,initial-scale=1">
+<meta http-equiv=x-ua-compatible content="IE=edge"><title>Setup Rancher cluster on OVH Public Cloud - Kaderovski</title><meta name=viewport content="width=device-width,initial-scale=1">
 <meta name=description content="The world of hosting is changing, and so is the world of application development. Today we are turning less and less to dedicated hosting for a single application, but more to build the infrastructure that will support it.
 In this sense, we prefer to use an Iaas solution on dedicated &ldquo;bare metal&rdquo; for our application overlay than pure &ldquo;bare metal&rdquo; per service.
 Application deployment missions pushed by developers must fit with the technology and logic of production.">
@@ -21,22 +21,24 @@ Application deployment missions pushed by developers must fit with the technolog
 <script src=https://kaderovski.comjs/feather.min.js></script>
 <link href=https://kaderovski.com/css/fonts.b685ac6f654695232de7b82a9143a46f9e049c8e3af3a21d9737b01f4be211d1.css rel=stylesheet>
 <link rel=stylesheet type=text/css media=screen href=https://kaderovski.com/css/main.40ca3a860425083862b7ebd55447caec5c4384573f0cb098b8d06a91e8dace2e.css>
-<link id=darkModeStyle rel=stylesheet type=text/css href=https://kaderovski.com/css/dark.726cd11ca6eb7c4f7d48eb420354f814e5c1b94281aaf8fd0511c1319f7f78a4.css media="(prefers-color-scheme: dark)">
 </head><body>
 <div class=content><header>
 <div class=main>
-<a href=https://kaderovski.com>Archie</a>
+<a href=https://kaderovski.com>Kaderovski</a>
 </div><nav>
 <a href=/>Home</a>
 <a href=/posts>All posts</a>
 <a href=/about>About</a>
-<a href=/tags>Tags</a>
+<a href=https://photos.kaderovski.com>Photos</a>
+<a href=/cv>CV</a>
 </nav></header><main>
 <article>
 <div class=title>
 <h1 class=title>Setup Rancher cluster on OVH Public Cloud</h1><div class=meta>Posted on Aug 4, 2017</div></div><section class=body>
 <p><img src=/Images/rancher_logo.jpeg alt="Rancher logo"></p><p>The world of hosting is changing, and so is the world of application development. Today we are turning less and less to dedicated hosting for a single application, but more to build the infrastructure that will support it.</p><p>In this sense, we prefer to use an Iaas solution on dedicated &ldquo;bare metal&rdquo; for our application overlay than pure &ldquo;bare metal&rdquo; per service.</p><p>Application deployment missions pushed by developers must fit with the technology and logic of production. Which <code>pipelines</code> should we use for our <code>CI</code>, <code>CD</code> ?</p><p>This post will not aim at answering the question of the pipelines to be implemented, it will be a question of <code>Ranching</code>, coupled with its <code>Cattle</code> orchestrator, on Public Cloud OVH <code>Openstack</code>.</p><h3 id=installation->Installation :</h3><p>The installation of <code>PCI</code> (Public Cloud) instances is the fastest step. We need to start with 5 instances:</p><ul>
-<li>1 LoadBalancer/ReverseProxy (<code>HA-Proxy</code> or <code>Nginx</code>) for €299</li><li>3 RancherServer in Cluster under <code>Galera</code> at 5€99</li><li>1 Node Worker (for our applications) at the price you want to put for your performance</li></ul><p>For Nginx installation, nothing very complex, a €2.99 instance will be more than enough since the only job of the server will be to forward the request to our rancher cluster.</p><p>The conf file will be :</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-fallback data-lang=fallback><span style=display:flex><span>upstream rancher {
+<li>1 LoadBalancer/ReverseProxy (<code>HA-Proxy</code> or <code>Nginx</code>) for €299</li><li>3 RancherServer in Cluster under <code>Galera</code> at 5€99</li><li>1 Node Worker (for our applications) at the price you want to put for your performance</li></ul><br>
+#### LoadBalancer Nginx :
+<p>For Nginx installation, nothing very complex, a €2.99 instance will be more than enough since the only job of the server will be to forward the request to our rancher cluster.</p><p>The conf file will be :</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-fallback data-lang=fallback><span style=display:flex><span>upstream rancher {
 </span></span><span style=display:flex><span>    server rancher-server1:8080;
 </span></span><span style=display:flex><span>    server rancher-server2:8080;
 </span></span><span style=display:flex><span>    server rancher-server3:8080;
@@ -91,6 +93,6 @@ The ease of use offered by the Rancher/Cattle duo allows an efficient and fluid 
 <nav class="nav tags">
 <ul class=tags>
 <li><a href=/tags/rancher>rancher</a></li><li><a href=/tags/cattle>cattle</a></li><li><a href=/tags/ovh>ovh</a></li><li><a href=/tags/pci>pci</a></li><li><a href=/tags/linux>linux</a></li><li><a href=/tags/docker>docker</a></li></ul></nav></div></article></main><footer>
-<div style=display:flex><a class=soc href=https://github.com/athul/archie title=GitHub><i data-feather=github></i></a><a class=soc href=https://twitter.com/athulcajay/ title=Twitter><i data-feather=twitter></i></a><a class=soc href=https://gitlab.com/athul/ title=GitLab><i data-feather=gitlab></i></a></div><div class=footer-info>
-2022 © Athul | <a href=https://github.com/athul/archie>Archie Theme</a> | Built with <a href=https://gohugo.io>Hugo</a>
+<div style=display:flex><a class=soc href=https://github.com/corentinderet title=GitHub><i data-feather=github></i></a><a class=soc href=https://gitlab.com/f00b4rch title=GitLab><i data-feather=gitlab></i></a></div><div class=footer-info>
+2022 © Kaderovski | <a href=https://github.com/athul/archie>Archie Theme</a> | Built with <a href=https://gohugo.io>Hugo</a>
 </div></footer><script>feather.replace()</script></div></body></html>

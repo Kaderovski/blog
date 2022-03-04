@@ -1,6 +1,6 @@
 <!doctype html><html><head>
 <meta charset=utf-8>
-<meta http-equiv=x-ua-compatible content="IE=edge"><title>Event Watcher Manager Python3 - Archie</title><meta name=viewport content="width=device-width,initial-scale=1">
+<meta http-equiv=x-ua-compatible content="IE=edge"><title>Event Watcher Manager Python3 - Kaderovski</title><meta name=viewport content="width=device-width,initial-scale=1">
 <meta name=description content="On one specific request, I had to work on the elaboration of an automating program reacting on SFTP users updates.
 The main technical issue of this request is that the SFTP protocol does not have a logging system.
 I had heard about the pyinotify library so I started working on it.
@@ -27,16 +27,16 @@ Technical requests concerning the project Details of the context of realization 
 <script src=https://kaderovski.comjs/feather.min.js></script>
 <link href=https://kaderovski.com/css/fonts.b685ac6f654695232de7b82a9143a46f9e049c8e3af3a21d9737b01f4be211d1.css rel=stylesheet>
 <link rel=stylesheet type=text/css media=screen href=https://kaderovski.com/css/main.40ca3a860425083862b7ebd55447caec5c4384573f0cb098b8d06a91e8dace2e.css>
-<link id=darkModeStyle rel=stylesheet type=text/css href=https://kaderovski.com/css/dark.726cd11ca6eb7c4f7d48eb420354f814e5c1b94281aaf8fd0511c1319f7f78a4.css media="(prefers-color-scheme: dark)">
 </head><body>
 <div class=content><header>
 <div class=main>
-<a href=https://kaderovski.com>Archie</a>
+<a href=https://kaderovski.com>Kaderovski</a>
 </div><nav>
 <a href=/>Home</a>
 <a href=/posts>All posts</a>
 <a href=/about>About</a>
-<a href=/tags>Tags</a>
+<a href=https://photos.kaderovski.com>Photos</a>
+<a href=/cv>CV</a>
 </nav></header><main>
 <article>
 <div class=title>
@@ -44,9 +44,9 @@ Technical requests concerning the project Details of the context of realization 
 <p>On one specific request, I had to work on the elaboration of an automating program reacting on SFTP users updates.<br>
 The main technical issue of this request is that the SFTP protocol does not have a logging system.</p><p>I had heard about <a href=https://github.com/seb-m/pyinotify/blob/master/python3/pyinotify.py>the pyinotify library</a> so I started working on it.<br>
 <strong>The project is presented in its primary mechanism</strong>, for more details, I invite you to read the sources.</p><h4 id=technical-requests-concerning-the-project>Technical requests concerning the project</h4><p>Details of the context of realization :
-Details of the context of realization :.<br>
+</u>Details of the context of realization :</u>.<br>
 The program must monitor SFTP user actions. These users have their HomeDir which are NFS mounts.<br>
-The user can upload anything to his account, but the program must detect video uploads (in some formats) and then perform a series of successive actions.</p><p>&lt;The operation should be as follows:<br>
+The user can upload anything to his account, but the program must detect video uploads (in some formats) and then perform a series of successive actions.</p><p>&lt;The operation should be as follows:</u><br>
 For each detected video repository, the video must check the allowed format, then it must be converted to .flv, have metadata, have a scree nshot (video thumbnail) and an email must be sent to the SFTP user&rsquo;s email address.</p><h4 id=preparation>Preparation</h4><p>Several specific details are binding to begin with. The main one being the association of the account user&rsquo;s mail to his own mail with the detection of the video repository.<br>
 That&rsquo;s why I chose to start on a static file, knowing in advance the list of users.</p><pre><code># Création de la classe
 class Person:
@@ -181,6 +181,6 @@ This project being in my famous <strong>ToDoList</strong> would be very close to
 <nav class="nav tags">
 <ul class=tags>
 <li><a href=/tags/python>python</a></li><li><a href=/tags/dev>dev</a></li><li><a href=/tags/pyinotify>pyinotify</a></li><li><a href=/tags/linux>linux</a></li></ul></nav></div></article></main><footer>
-<div style=display:flex><a class=soc href=https://github.com/athul/archie title=GitHub><i data-feather=github></i></a><a class=soc href=https://twitter.com/athulcajay/ title=Twitter><i data-feather=twitter></i></a><a class=soc href=https://gitlab.com/athul/ title=GitLab><i data-feather=gitlab></i></a></div><div class=footer-info>
-2022 © Athul | <a href=https://github.com/athul/archie>Archie Theme</a> | Built with <a href=https://gohugo.io>Hugo</a>
+<div style=display:flex><a class=soc href=https://github.com/corentinderet title=GitHub><i data-feather=github></i></a><a class=soc href=https://gitlab.com/f00b4rch title=GitLab><i data-feather=gitlab></i></a></div><div class=footer-info>
+2022 © Kaderovski | <a href=https://github.com/athul/archie>Archie Theme</a> | Built with <a href=https://gohugo.io>Hugo</a>
 </div></footer><script>feather.replace()</script></div></body></html>
