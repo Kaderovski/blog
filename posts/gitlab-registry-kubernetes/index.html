@@ -1,44 +1,18 @@
-<!doctype html><html><head>
-<meta charset=utf-8>
-<meta http-equiv=x-ua-compatible content="IE=edge"><title>Add Gitlab Registry in Kubernetes - Kaderovski</title><meta name=viewport content="width=device-width,initial-scale=1">
-<meta name=description content="Now that Gitlab offers its own image registry, it is possible to use it directly in our K8s environment! If you missed the info (which is starting to date now), I refer you to this article.
+<!doctype html><html><head><meta charset=utf-8><meta http-equiv=x-ua-compatible content="IE=edge"><title>Add Gitlab Registry in Kubernetes - Kaderovski</title><meta name=viewport content="width=device-width,initial-scale=1"><meta name=description content="Now that Gitlab offers its own image registry, it is possible to use it directly in our K8s environment! If you missed the info (which is starting to date now), I refer you to this article.
 To add the Gitlab private registry in Kubernetes you have to create a secret :
 > kubectl create secret docker-registry regsecret --docker-server=registry.gitlab.xyz --docker-username='' --docker-password='' --docker-email=&#34;&#34;  Where :
---docker-server regitry gitlab --docker-username user gitlab autorisé à acceder au registry --docker-password son mot de passe --docker-email son email We will check secret creation :">
-<meta property="og:image" content>
-<meta property="og:title" content="Add Gitlab Registry in Kubernetes">
-<meta property="og:description" content="Now that Gitlab offers its own image registry, it is possible to use it directly in our K8s environment! If you missed the info (which is starting to date now), I refer you to this article.
+--docker-server regitry gitlab --docker-username user gitlab autorisé à acceder au registry --docker-password son mot de passe --docker-email son email We will check secret creation :"><meta property="og:image" content><meta property="og:title" content="Add Gitlab Registry in Kubernetes"><meta property="og:description" content="Now that Gitlab offers its own image registry, it is possible to use it directly in our K8s environment! If you missed the info (which is starting to date now), I refer you to this article.
 To add the Gitlab private registry in Kubernetes you have to create a secret :
 > kubectl create secret docker-registry regsecret --docker-server=registry.gitlab.xyz --docker-username='' --docker-password='' --docker-email=&#34;&#34;  Where :
---docker-server regitry gitlab --docker-username user gitlab autorisé à acceder au registry --docker-password son mot de passe --docker-email son email We will check secret creation :">
-<meta property="og:type" content="article">
-<meta property="og:url" content="https://kaderovski.com/posts/gitlab-registry-kubernetes/"><meta property="article:section" content="posts">
-<meta property="article:published_time" content="2017-08-10T12:06:05+00:00">
-<meta property="article:modified_time" content="2017-08-10T12:06:05+00:00">
-<meta name=twitter:card content="summary">
-<meta name=twitter:title content="Add Gitlab Registry in Kubernetes">
-<meta name=twitter:description content="Now that Gitlab offers its own image registry, it is possible to use it directly in our K8s environment! If you missed the info (which is starting to date now), I refer you to this article.
+--docker-server regitry gitlab --docker-username user gitlab autorisé à acceder au registry --docker-password son mot de passe --docker-email son email We will check secret creation :"><meta property="og:type" content="article"><meta property="og:url" content="https://kaderovski.com/posts/gitlab-registry-kubernetes/"><meta property="article:section" content="posts"><meta property="article:published_time" content="2017-08-10T12:06:05+00:00"><meta property="article:modified_time" content="2017-08-10T12:06:05+00:00"><meta name=twitter:card content="summary"><meta name=twitter:title content="Add Gitlab Registry in Kubernetes"><meta name=twitter:description content="Now that Gitlab offers its own image registry, it is possible to use it directly in our K8s environment! If you missed the info (which is starting to date now), I refer you to this article.
 To add the Gitlab private registry in Kubernetes you have to create a secret :
 > kubectl create secret docker-registry regsecret --docker-server=registry.gitlab.xyz --docker-username='' --docker-password='' --docker-email=&#34;&#34;  Where :
---docker-server regitry gitlab --docker-username user gitlab autorisé à acceder au registry --docker-password son mot de passe --docker-email son email We will check secret creation :">
-<script src=https://kaderovski.com/js/feather.min.js></script>
-<link href=https://kaderovski.com/css/fonts.b685ac6f654695232de7b82a9143a46f9e049c8e3af3a21d9737b01f4be211d1.css rel=stylesheet>
-<link rel=stylesheet type=text/css media=screen href=https://kaderovski.com/css/main.012e5aa5cb264fd430bd3ad5b7db828508ccc0fc66b280031de12b7eec06ef85.css>
-</head><body>
-<div class=content><header>
-<div class=main>
-<a href=https://kaderovski.com>Kaderovski</a>
-</div><nav>
-<a href=/>Home</a>
+--docker-server regitry gitlab --docker-username user gitlab autorisé à acceder au registry --docker-password son mot de passe --docker-email son email We will check secret creation :"><script src=https://kaderovski.com/js/feather.min.js></script>
+<link href=https://kaderovski.com/css/fonts.b685ac6f654695232de7b82a9143a46f9e049c8e3af3a21d9737b01f4be211d1.css rel=stylesheet><link rel=stylesheet type=text/css media=screen href=https://kaderovski.com/css/main.012e5aa5cb264fd430bd3ad5b7db828508ccc0fc66b280031de12b7eec06ef85.css></head><body><div class=content><header><div class=main><a href=https://kaderovski.com>Kaderovski</a></div><nav><a href=/>Home</a>
 <a href=/posts>Posts</a>
 <a href=/about>About</a>
 <a href=https://photos.kaderovski.com>Photos</a>
-<a href=/cv>CV</a>
-</nav></header><main>
-<article>
-<div class=title>
-<h1 class=title>Add Gitlab Registry in Kubernetes</h1><div class=meta>Posted on Aug 10, 2017</div></div><section class=body>
-<p>Now that Gitlab offers its own image registry, it is possible to use it directly in our K8s environment!
+<a href=/cv>CV</a></nav></header><main><article><div class=title><h1 class=title>Add Gitlab Registry in Kubernetes</h1><div class=meta>Posted on Aug 10, 2017</div></div><section class=body><p>Now that Gitlab offers its own image registry, it is possible to use it directly in our K8s environment!
 If you missed the info (which is starting to date now), I refer you to <a href=https://about.gitlab.com/2016/05/23/gitlab-container-registry/>this article</a>.</p><p>To add the Gitlab private registry in Kubernetes you have to create a secret :</p><pre><code>&gt; kubectl create secret docker-registry regsecret --docker-server=registry.gitlab.xyz --docker-username='' --docker-password='' --docker-email=&quot;&quot;
 </code></pre><p>Where :</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-fallback data-lang=fallback><span style=display:flex><span>--docker-server         regitry gitlab
 </span></span><span style=display:flex><span>--docker-username       user gitlab autorisé à acceder au registry
@@ -82,10 +56,4 @@ If you missed the info (which is starting to date now), I refer you to <a href=h
 </span></span><span style=display:flex><span>        - name: regsecret
 </span></span></code></pre></div><p>See where we call <code>secret</code> :</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-fallback data-lang=fallback><span style=display:flex><span>imagePullSecrets:
 </span></span><span style=display:flex><span>  - name: regsecret
-</span></span></code></pre></div><p>Enjoy !</p></section><div class=post-tags>
-<nav class="nav tags">
-<ul class=tags>
-<li><a href=/tags/kubernetes>kubernetes</a></li><li><a href=/tags/gitlab>gitlab</a></li><li><a href=/tags/registry>registry</a></li></ul></nav></div></article></main><footer>
-<div style=display:flex><a class=soc href=https://github.com/kaderovski title=GitHub><i data-feather=github></i></a><a class=soc href=https://gitlab.com/kaderovski title=GitLab><i data-feather=gitlab></i></a></div><div class=footer-info>
-2022 © Kaderovski
-</div></footer><script>feather.replace()</script></div></body></html>
+</span></span></code></pre></div><p>Enjoy !</p></section><div class=post-tags><nav class="nav tags"><ul class=tags><li><a href=/tags/kubernetes>kubernetes</a></li><li><a href=/tags/gitlab>gitlab</a></li><li><a href=/tags/registry>registry</a></li></ul></nav></div></article></main><footer><div style=display:flex><a class=soc href=https://github.com/kaderovski title=GitHub><i data-feather=github></i></a><a class=soc href=https://gitlab.com/kaderovski title=GitLab><i data-feather=gitlab></i></a></div><div class=footer-info>2022 © Kaderovski</div></footer><script>feather.replace()</script></div></body></html>
