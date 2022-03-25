@@ -16,14 +16,14 @@ fdisk -l  You can have different output depending of your system (sd{x}, vd{x}).
 Then create a new partition :
 # parted /dev/{{disk}} mktable gpt mkpart primary ext4 512 100% quit Format it :
 mkfs -t ext4 -L rootfs /dev/{{disk}}1  Mount :
-mount /dev/{{disk}}1 /mnt  Let’s make it peristent, we need UUID."><script src=https://kaderovski.com/js/feather.min.js></script>
-<link href=https://kaderovski.com/css/fonts.b685ac6f654695232de7b82a9143a46f9e049c8e3af3a21d9737b01f4be211d1.css rel=stylesheet><link rel=stylesheet type=text/css media=screen href=https://kaderovski.com/css/main.012e5aa5cb264fd430bd3ad5b7db828508ccc0fc66b280031de12b7eec06ef85.css><link id=darkModeStyle rel=stylesheet type=text/css href=https://kaderovski.com/css/dark.726cd11ca6eb7c4f7d48eb420354f814e5c1b94281aaf8fd0511c1319f7f78a4.css disabled></head><body><div class=content><header><div class=main><a href=https://kaderovski.com>Kaderovski</a></div><nav><a href=/>Home</a>
+mount /dev/{{disk}}1 /mnt  Let’s make it peristent, we need UUID."><script src=https://kaderovski.com//js/feather.min.js></script>
+<link href=https://kaderovski.com/css/fonts.b685ac6f654695232de7b82a9143a46f9e049c8e3af3a21d9737b01f4be211d1.css rel=stylesheet><link rel=stylesheet type=text/css media=screen href=https://kaderovski.com/css/main.012e5aa5cb264fd430bd3ad5b7db828508ccc0fc66b280031de12b7eec06ef85.css><link id=darkModeStyle rel=stylesheet type=text/css href=https://kaderovski.com/css/dark.726cd11ca6eb7c4f7d48eb420354f814e5c1b94281aaf8fd0511c1319f7f78a4.css disabled></head><body><div class=content><header><div class=main><a href=https://kaderovski.com/>Kaderovski</a></div><nav><a href=/>Home</a>
 <a href=/posts>Posts</a>
 <a href=/about>About</a>
 <a href=https://photos.kaderovski.com>Photos</a>
 <a href=/cv>CV</a>
 | <a id=dark-mode-toggle onclick=toggleTheme() href></a>
-<script src=https://kaderovski.comjs/themetoggle.js></script></nav></header><main><article><div class=title><h1 class=title>Additional Volume Public Cloud Ovh</h1><div class=meta>Posted on Jul 31, 2017</div></div><section class=body><p>To add an additional disk/volume on your OVH public cloud, you need to follow some steps.</p><p>First, identify your new disk :</p><pre><code>fdisk -l
+<script src=https://kaderovski.com/js/themetoggle.js></script></nav></header><main><article><div class=title><h1 class=title>Additional Volume Public Cloud Ovh</h1><div class=meta>Posted on Jul 31, 2017</div></div><section class=body><p>To add an additional disk/volume on your OVH public cloud, you need to follow some steps.</p><p>First, identify your new disk :</p><pre><code>fdisk -l
 </code></pre><p>You can have different output depending of your system (<code>sd{x}</code>, <code>vd{x}</code>).</p><p>Then create a new partition :</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-fallback data-lang=fallback><span style=display:flex><span># parted /dev/{{disk}}
 </span></span><span style=display:flex><span>mktable gpt
 </span></span><span style=display:flex><span>mkpart primary ext4 512 100%
