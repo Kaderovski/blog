@@ -11,13 +11,11 @@ Anyway, all this to say that we don&rsquo;t have our private IP and it&rsquo;s t
 The fix trick is stupid. Very stupid.
 Add:
 allow-hotplug ens4 iface ens4 inet dhcp In /etc/network/interface file."><script src=https://kaderovski.com//js/feather.min.js></script>
-<link href=https://kaderovski.com/css/fonts.b685ac6f654695232de7b82a9143a46f9e049c8e3af3a21d9737b01f4be211d1.css rel=stylesheet><link rel=stylesheet type=text/css media=screen href=https://kaderovski.com/css/main.012e5aa5cb264fd430bd3ad5b7db828508ccc0fc66b280031de12b7eec06ef85.css><link id=darkModeStyle rel=stylesheet type=text/css href=https://kaderovski.com/css/dark.726cd11ca6eb7c4f7d48eb420354f814e5c1b94281aaf8fd0511c1319f7f78a4.css disabled></head><body><div class=content><header><div class=main><a href=https://kaderovski.com/>Kaderovski</a></div><nav><a href=/>Home</a>
+<link href=https://kaderovski.com/css/fonts.b685ac6f654695232de7b82a9143a46f9e049c8e3af3a21d9737b01f4be211d1.css rel=stylesheet><link rel=stylesheet type=text/css media=screen href=https://kaderovski.com/css/main.012e5aa5cb264fd430bd3ad5b7db828508ccc0fc66b280031de12b7eec06ef85.css></head><body><div class=content><header><div class=main><a href=https://kaderovski.com/>Kaderovski</a></div><nav><a href=/>Home</a>
 <a href=/posts>Posts</a>
 <a href=/about>About</a>
 <a href=https://photos.kaderovski.com>Photos</a>
-<a href=/cv>CV</a>
-| <a id=dark-mode-toggle onclick=toggleTheme() href></a>
-<script src=https://kaderovski.com/js/themetoggle.js></script></nav></header><main><article><div class=title><h1 class=title>Ubuntu Vrack Ovh Fix</h1><div class=meta>Posted on Mar 4, 2018</div></div><section class=body><p>You may have noticed it, but when you populate a PCI OVH instance under Ubuntu by activating Vrack, your Vm does not have its private IP at boot time.
+<a href=/cv>CV</a></nav></header><main><article><div class=title><h1 class=title>Ubuntu Vrack Ovh Fix</h1><div class=meta>Posted on Mar 4, 2018</div></div><section class=body><p>You may have noticed it, but when you populate a PCI OVH instance under Ubuntu by activating Vrack, your Vm does not have its private IP at boot time.
 So, yes, I don&rsquo;t like Ubuntu, but sometimes you don&rsquo;t have a choice.</p><p>Anyway, all this to say that we don&rsquo;t have our private IP and it&rsquo;s too sad. (RT)</p><p>The fix trick is stupid.
 Very stupid.</p><p>Add:</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-fallback data-lang=fallback><span style=display:flex><span>allow-hotplug ens4
 </span></span><span style=display:flex><span>iface ens4 inet dhcp
